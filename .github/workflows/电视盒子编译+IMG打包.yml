@@ -320,7 +320,7 @@ jobs:
           allowUpdates: true
           removeArtifacts: false
           replacesArtifacts: true
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GENGLIN }}
 
       - name: Packaging OpenWrt
         if: ${{ steps.clean.outputs.status }} == 'success' && !cancelled()
@@ -333,7 +333,7 @@ jobs:
           kernel_repo: ${{ inputs.kernel_repo }}
           kernel_usage: ${{ inputs.kernel_usage }}
           builder_name: ${{ inputs.builder_name }}
-          gh_token: ${{ secrets.GH_TOKEN }}
+          gh_token: ${{ secrets.GENGLIN }}
 
       - name: Upload the packaged OpenWrt
         uses: ncipollo/release-action@main
